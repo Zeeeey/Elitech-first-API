@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>SHOP</h1>
+
+    <div class="flex-container d-flex">
+      <div>
+        <div class="item" id="selectedItem">
+          <h3>Food</h3>
+          <h5>Description</h5>
+          <div>
+            <h6>Price: $5</h6>
+            <span>In Stock</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <form action="" id="selectedForm">
+            <input type="text" class="inputBox" id="name" placeholder="Name" />
+            <input
+              type="text"
+              class="inputBox"
+              id="desc"
+              placeholder="Description"
+            />
+            <input
+              type="text"
+              class="inputBox"
+              id="price"
+              placeholder="Price"
+            />
+            <button type="button" onclick="addProduct()">Add</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="cart">
+        <p>Cart:</p>
+        <div class="item">
+          <p>2x Cucumber</p>
+        </div>
+
+        <div class="item">Total: $<span>12</span></div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
