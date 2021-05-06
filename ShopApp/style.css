@@ -14,11 +14,32 @@
     display: flex;
     flex-wrap: wrap;
     font-size: 30px;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .flex-item {
     padding: 15px;
     flex: 30%;
     font-size: 20px;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .border-bottom {
+    border-bottom: 2px solid red;
+  }
+
+  .my-style {
+    border-bottom: 10px solid green;
+    margin-bottom: 20px;
+  }
+
+  .div-left  {
+    text-align: end;
+  }
+
+  .red-font {
+    color: red;
   }
