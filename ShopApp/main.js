@@ -15,12 +15,17 @@ const getProduct = async () => {
   let totalPrice = 0;
 
   await fetch(`${PRODUCT_BASEURL}`)
-    .then((resp) => resp.json())
-    .then((products) => {
+    .then((resp) => {
+      // console.log("resp", resp)
+      return resp.json();
+    })
+    .then((data) => {
       box.innerHTML = "";
       cart.innerHTML = "";
-      if (products.length) {
-        return products.map((product, id) => {
+      // console.log("data", data);
+    //   const { products } = data;
+      if (data.products.length) {
+        return data.products.map((product, id) => {
           let div = createNode("div");
           let spanName = createNode("span");
           let spanDesc = createNode("span");
@@ -58,7 +63,10 @@ const getProduct = async () => {
       }
       return (total.innerHTML = totalPrice);
     })
-    .catch(() => alert("Error While Fetching Product"));
+    .catch((err) => {
+      console.log("err", err);
+      //   alert("Error While Fetching Product");
+    });
 };
 
 const addProduct = async () => {
